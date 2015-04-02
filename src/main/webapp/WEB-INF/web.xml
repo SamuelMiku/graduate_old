@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+  <display-name>gl project</display-name>
+  
+  <servlet>
+    <servlet-name>SelectByIDServlet</servlet-name>
+    <servlet-class>com.gl.select.SelectByIDServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchStuMore</servlet-name>
+    <servlet-class>com.gl.select.SearchStuMore</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchStuLess</servlet-name>
+    <servlet-class>com.gl.select.SearchStuLess</servlet-class>
+  </servlet>
+  <servlet>
+  	<description></description>
+  	<display-name>Error</display-name>
+  	<servlet-name>Error</servlet-name>
+  	<servlet-class>com.gl.select.Error</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>FileDownload</display-name>
+  	<servlet-name>FileDownload</servlet-name>
+  	<servlet-class>com.gl.file.FileDownload</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>DataInput</display-name>
+  	<servlet-name>DataInput</servlet-name>
+  	<servlet-class>com.gl.excel.DataInput</servlet-class>
+  </servlet>
+  <servlet>
+  	<description></description>
+  	<display-name>RouteExcelImportJSP</display-name>
+  	<servlet-name>RouteExcelImportJSP</servlet-name>
+  	<servlet-class>com.gl.route.RouteExcelImportJSP</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>RouteLogJSP</display-name>
+  	<servlet-name>RouteLogJSP</servlet-name>
+  	<servlet-class>com.gl.route.RouteLogJSP</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>LogServlet</display-name>
+  	<servlet-name>LogServlet</servlet-name>
+  	<servlet-class>com.gl.log.LogServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>AdminMsg</display-name>
+  	<servlet-name>AdminMsg</servlet-name>
+  	<servlet-class>com.gl.servlet.AdminMsg</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>MainPage</display-name>
+  	<servlet-name>MainPage</servlet-name>
+  	<servlet-class>com.gl.servlet.MainPage</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>AuthServlet</display-name>
+  	<servlet-name>AuthServlet</servlet-name>
+  	<servlet-class>com.gl.servlet.AuthServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>SelectByIDServlet</servlet-name>
+    <url-pattern>/SelectByIDServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchStuMore</servlet-name>
+    <url-pattern>/SearchStuMore</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchStuLess</servlet-name>
+    <url-pattern>/SearchStuLess</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Error</servlet-name>
+  	<url-pattern>/Error</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FileDownload</servlet-name>
+  	<url-pattern>/FileDownload</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DataInput</servlet-name>
+  	<url-pattern>/DataInput</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RouteExcelImportJSP</servlet-name>
+  	<url-pattern>/RouteExcelImportJSP</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RouteLogJSP</servlet-name>
+  	<url-pattern>/RouteLogJSP</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogServlet</servlet-name>
+  	<url-pattern>/LogServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminMsg</servlet-name>
+  	<url-pattern>/AdminMsg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MainPage</servlet-name>
+  	<url-pattern>/main</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AuthServlet</servlet-name>
+  	<url-pattern>/Authcode</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  	<filter-name>encoding</filter-name>
+  	<filter-class>com.gl.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>encoding</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- log4j init properties file location -->
+  <context-param>
+        <param-name>log4j-location</param-name>
+        <param-value>WEB-INF/config/log/log4j.properties</param-value>
+  </context-param>
+  
+  <!-- log4j init listener -->
+  <listener>
+    <listener-class>com.gl.log.Log4jContextListener</listener-class>
+  </listener>
+  
+  <!-- taglib -->
+  <jsp-config>
+  	<taglib>
+  		<tab-uri>/pagerTag</taglib-uri>
+  		<taglib-location>/WEB-INF/config/taglib/page.tld</taglib-location>
+  	</taglib>
+  </jsp-config>
+  
+</web-app>

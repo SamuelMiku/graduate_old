@@ -1,0 +1,7 @@
+2014-10-13 08:01:10:INFO http-bio-8080-exec-1 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2014-10-13 08:02:01:INFO http-bio-8080-exec-3 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2014-10-13 08:06:20:INFO http-bio-8080-exec-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2014-10-14 07:00:55:INFO http-bio-8080-exec-7 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2014-10-14 07:12:01:INFO http-bio-8080-exec-6 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2014-10-14 09:51:02:INFO http-bio-8080-exec-3 com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2014-10-14 09:54:51:INFO http-bio-8080-exec-4 com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
